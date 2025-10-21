@@ -7,6 +7,7 @@ public class Locomotion : MonoBehaviour
     float movementForce;
 
     Vector3 input;
+    bool jumpPressed;
 
     Rigidbody rb;
     PlayerInput playerInput;
@@ -17,6 +18,8 @@ public class Locomotion : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
         playerInput = GetComponent<PlayerInput>();
+
+        playerInput.actions["Jump"].performed += ctx => jumpPressed = true;
 
     }
 
@@ -30,5 +33,11 @@ public class Locomotion : MonoBehaviour
     private void FixedUpdate()
     {
         rb.AddForce(new Vector3(input.x, 0f, input.y) * movementForce);
+
+        if (jumpPressed)
+        {
+            rb.AddForce(Vector3.up * jumpForce);
+            jumpPressed = false;
+        }
     }
 }
