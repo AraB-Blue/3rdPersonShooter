@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI; 
 
 public class ClickToMove : MonoBehaviour
 {
@@ -11,33 +12,39 @@ public class ClickToMove : MonoBehaviour
 
     Vector3 destination;
     [SerializeField] Transform destinationCapsule;
+    NavMeshAgent agent;
    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+       
         
+        agent = GetComponent<NavMeshAgent>();
+        agent.destination = destinationCapsule.position;
     }
 
     
     void Update()
     {
-        destination = destinationCapsule.position;
+       
         if (Input.GetMouseButtonDown(1))
         {
+            
             HandleClick();
         }
+
     }
 
     private void HandleClick()
     {
-        StartCoroutine(MoveToPosition(destination));
+        RaycastHit hit;
+
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100f))
+        {
+            destinationCapsule.position = hit.point;
+            agent.destination = destinationCapsule.position;
+        }
+        
     }
 
-    IEnumerator MoveToPosition (Vector3 _destination)
-    {
-        Vector3 moveDirection = _destination - transform.position;
-        moveDirection = moveDirection.normalized;
-        rb.AddForce(moveDirection * moveSpeed, ForceMode.VelocityChange);
-        yield return null;
-    }
 }
