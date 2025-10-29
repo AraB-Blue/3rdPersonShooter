@@ -20,7 +20,7 @@ public class ClickToMove : MonoBehaviour
        
         
         agent = GetComponent<NavMeshAgent>();
-        agent.destination = destinationCapsule.position;
+        //agent.destination = destinationCapsule.position;
     }
 
     
