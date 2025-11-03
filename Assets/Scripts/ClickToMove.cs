@@ -13,14 +13,17 @@ public class ClickToMove : MonoBehaviour
     Vector3 destination;
     [SerializeField] Transform destinationCapsule;
     NavMeshAgent agent;
+    Animator animator;
+    private Vector3 velocidadX;
    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-       
-        
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
+
         //agent.destination = destinationCapsule.position;
+        
     }
 
     
@@ -32,6 +35,10 @@ public class ClickToMove : MonoBehaviour
             
             HandleClick();
         }
+
+        velocidadX = agent.velocity;
+        animator.SetFloat("InputX", agent.velocity.x);
+        animator.SetFloat("InputY", agent.velocity.z);
 
     }
 
