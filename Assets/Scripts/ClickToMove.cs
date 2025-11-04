@@ -23,7 +23,7 @@ public class ClickToMove : MonoBehaviour
         animator = GetComponent<Animator>();
 
         //agent.destination = destinationCapsule.position;
-        
+        agent.updatePosition = false;
     }
 
     
@@ -37,7 +37,7 @@ public class ClickToMove : MonoBehaviour
         }
 
         velocidadX = agent.velocity;
-        animator.SetFloat("forwardMovement", agent.velocity.z);
+        animator.SetFloat("forwardMovement", agent.velocity.magnitude);
 
     }
 
@@ -53,4 +53,11 @@ public class ClickToMove : MonoBehaviour
         
     }
 
+    private void OnAnimatorMove()
+    {
+        Vector3 position = animator.rootPosition;
+        position.y = agent.nextPosition.y;
+        transform.position = position;
+        agent.nextPosition = transform.position;
+    }
 }
