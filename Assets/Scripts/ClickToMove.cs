@@ -37,8 +37,7 @@ public class ClickToMove : MonoBehaviour
         }
 
         velocidadX = agent.velocity;
-        animator.SetFloat("InputX", agent.velocity.x);
-        animator.SetFloat("InputY", agent.velocity.z);
+        animator.SetFloat("forwardMovement", agent.velocity.z);
 
     }
 
