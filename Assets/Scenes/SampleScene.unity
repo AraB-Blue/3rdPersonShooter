@@ -2734,7 +2734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Unit
   characterName: Chomper
-  hasActed: 1
+  hasActed: 0
 --- !u!54 &1418998119
 Rigidbody:
   m_ObjectHideFlags: 0
