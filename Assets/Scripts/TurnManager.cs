@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class TurnManager : MonoBehaviour
 {
-
+    public static TurnManager Instance; //todos pueden acceder
     public bool isPlayerTurn = true;
 
     public List<Unit> enemyUnits = new List<Unit>();
     public List<Unit> playerUnits = new List<Unit>();
+
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
@@ -20,7 +26,6 @@ public class TurnManager : MonoBehaviour
     {
         isPlayerTurn = true;
         ResetUnits(playerUnits);
-
         Debug.Log("Turno del jugador");
     }
 
@@ -47,10 +52,10 @@ public class TurnManager : MonoBehaviour
         {
             if (u.hasActed)
             {
-                return true;
+                return false;
             }
         }
-        return false;       
+        return true;       
     }
 
     public void CheckEndTurn()
