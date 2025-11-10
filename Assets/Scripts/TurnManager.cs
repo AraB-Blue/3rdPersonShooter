@@ -50,7 +50,7 @@ public class TurnManager : MonoBehaviour
     {
         foreach (var u in units)
         {
-            if (u.hasActed)
+            if (!u.hasActed)
             {
                 return false;
             }
