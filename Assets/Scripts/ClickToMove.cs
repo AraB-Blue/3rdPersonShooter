@@ -16,7 +16,7 @@ public class ClickToMove : MonoBehaviour
     Animator animator;
     private Vector3 velocidadX;
    
-    void Start()
+    void OnEnable()
     {
         rb = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
@@ -34,9 +34,12 @@ public class ClickToMove : MonoBehaviour
         {
             
             HandleClick();
+            
+            Unit unit = GetComponent<Unit>();
+            unit.FinishMovement();
         }
 
-        velocidadX = agent.velocity;
+        //velocidadX = agent.velocity;
         animator.SetFloat("forwardMovement", agent.velocity.magnitude);
 
     }

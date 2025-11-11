@@ -5,38 +5,44 @@ public class Unit : MonoBehaviour
     [SerializeField] string characterName;
 
     public bool hasActed = true;
-    
-    void Start()
-    {
-        
-    }
+    bool hasAttacked = false;
+    bool hasMoved = false;
+    [SerializeField] bool isFriendly;
+    ClickToMove clickToMove;
 
-    
-    void Update()
+    private void Awake()
     {
-        
+        clickToMove = GetComponent<ClickToMove>();
+        clickToMove.enabled = false;
     }
 
     public void Run()
     {
-        if (hasActed)
+        if (hasActed || hasMoved)
         {
             return;
         }
 
-        Debug.Log(characterName + " usa la accion correr");
-        FinishAction();
+        if (isFriendly)
+        {
+            clickToMove.enabled = true;
+        }
+        else
+        {
+            Debug.Log("se mueve pero en malvado");
+        }
+            Debug.Log(characterName + " usa la accion correr"); 
     }
 
     public void Attack()
     {
-        if (hasActed)
+        if (hasActed || hasAttacked)
         {
             return;
         }
 
         Debug.Log(characterName + " usa la accion atacar");
-        FinishAction();
+        FinishAttack();
     }
 
     public void PassTurn()
@@ -54,8 +60,20 @@ public class Unit : MonoBehaviour
     public void StartTurnForThisUnit()
     {
         hasActed = false;
+        hasAttacked = false;
+        hasMoved = false;
     }
 
+    public void FinishMovement ()
+    {
+        clickToMove.enabled = false;
+        hasMoved = true;
+    }
+
+    public void FinishAttack ()
+    {
+        hasAttacked = true;
+    }
     public void FinishAction()
     {
         hasActed = true;
