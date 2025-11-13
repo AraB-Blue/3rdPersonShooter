@@ -22,7 +22,7 @@ public class ClickToMove : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
 
-        //agent.destination = destinationCapsule.position;
+        agent.destination = destinationCapsule.position;
         agent.updatePosition = false;
     }
 
@@ -52,6 +52,7 @@ public class ClickToMove : MonoBehaviour
         {
             destinationCapsule.position = hit.point;
             agent.destination = destinationCapsule.position;
+            hit.collider.GetComponent<Unit>();
         }
         
     }
