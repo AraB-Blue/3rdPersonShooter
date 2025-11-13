@@ -260,7 +260,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1669354553}
+  m_Father: {fileID: 121492309}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &45222806
 MonoBehaviour:
@@ -834,6 +834,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 45222805}
   - {fileID: 283387243}
   - {fileID: 1364619417}
   m_Father: {fileID: 0}
@@ -847,6 +848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 148475428}
+  - component: {fileID: 148475429}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -871,6 +873,21 @@ Transform:
   - {fileID: 1402508363}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &148475429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148475427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc64b8e3f05995845ae150721185273a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UiUnitSelectionToggle
+  elementUIToToggle:
+  - {fileID: 672980744}
+  - {fileID: 1402508359}
 --- !u!114 &187833902 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2744347132295501156, guid: adffb986f9a9ee145925fcb66d2e240e, type: 3}
@@ -4429,7 +4446,6 @@ Transform:
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
-  - {fileID: 45222805}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1700742152
@@ -4770,12 +4786,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860273674}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22cc7a1caac9c1c42be410eac6a584b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnitSelection
-  selectedUnit: {fileID: 0}
+  selectedUnit: {fileID: 1418998118}
 --- !u!4 &1860273676
 Transform:
   m_ObjectHideFlags: 0
