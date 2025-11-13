@@ -1236,7 +1236,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148475427}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc64b8e3f05995845ae150721185273a, type: 3}
   m_Name: 
@@ -1269,11 +1269,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.27
+      value: -12.2699995
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.000001
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10585,8 +10585,8 @@ SceneRoots:
   - {fileID: 1547267197}
   - {fileID: 1332347313391282498}
   - {fileID: 1418998116}
-  - {fileID: 1653308258}
   - {fileID: 192237035}
+  - {fileID: 1653308258}
   - {fileID: 2138258055}
   - {fileID: 148475428}
   - {fileID: 1860273676}
