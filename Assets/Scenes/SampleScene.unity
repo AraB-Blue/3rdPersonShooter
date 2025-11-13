@@ -2449,7 +2449,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 187833902}
         m_TargetAssemblyTypeName: Unit, Assembly-CSharp
         m_MethodName: Run
         m_Mode: 1
@@ -2582,7 +2582,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 187833902}
         m_TargetAssemblyTypeName: Unit, Assembly-CSharp
         m_MethodName: Attack
         m_Mode: 1
@@ -3239,7 +3239,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 187833902}
         m_TargetAssemblyTypeName: Unit, Assembly-CSharp
         m_MethodName: PassTurn
         m_Mode: 1
