@@ -1,6 +1,8 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System.Collections;
 
 public class TurnManager : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class TurnManager : MonoBehaviour
 
     public List<Unit> enemyUnits = new List<Unit>();
     public List<Unit> playerUnits = new List<Unit>();
+
+    public TMP_Text turnoAliado, turnoEnemigo;
 
 
     private void Awake()
@@ -27,6 +31,8 @@ public class TurnManager : MonoBehaviour
         isPlayerTurn = true;
         ResetUnits(playerUnits);
         UnitSelection.Instance.enabled = true;
+        StartCoroutine(MostrarTurno(turnoAliado, "Turno de los aliados"));
+
         Debug.Log("Turno del jugador");
     }
 
@@ -34,10 +40,21 @@ public class TurnManager : MonoBehaviour
     {
         isPlayerTurn = false;
         ResetUnits(playerUnits);
+        StartCoroutine(MostrarTurno(turnoEnemigo, "turno de los enemigos"));
 
         Debug.Log("Turno del enemigo");
     }
 
+    IEnumerator MostrarTurno (TMP_Text textoUI, string mensaje)
+    {
+        textoUI.text = mensaje;
+        textoUI.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(3f);
+
+        textoUI.gameObject.SetActive(false);
+    }
+    
     private void ResetUnits (List<Unit> units)
     {
         foreach (Unit unit in units)
