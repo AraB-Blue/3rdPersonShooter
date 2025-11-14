@@ -823,7 +823,7 @@ GameObject:
   - component: {fileID: 148475428}
   - component: {fileID: 148475429}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: UiUnitSelection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
