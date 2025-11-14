@@ -26,6 +26,7 @@ public class TurnManager : MonoBehaviour
     {
         isPlayerTurn = true;
         ResetUnits(playerUnits);
+        UnitSelection.Instance.enabled = true;
         Debug.Log("Turno del jugador");
     }
 
