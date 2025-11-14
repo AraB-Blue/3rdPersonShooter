@@ -279,8 +279,8 @@ MonoBehaviour:
   - {fileID: 1653308261}
   - {fileID: 677352682}
   playerUnits:
-  - {fileID: 187833902}
   - {fileID: 1418998118}
+  - {fileID: 187833902}
 --- !u!1 &121492308
 GameObject:
   m_ObjectHideFlags: 0
