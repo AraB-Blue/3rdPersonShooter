@@ -1,10 +1,7 @@
 using UnityEngine;
 
-public class Shooting : MonoBehaviour
+public class Equipment : MonoBehaviour
 {
-    bool isOnLoS; 
-
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
