@@ -836,7 +836,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2744347132295501156, guid: adffb986f9a9ee145925fcb66d2e240e, type: 3}
   m_PrefabInstance: {fileID: 1332347313391282498}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1332347313391282499}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b60b62d05cb8de468ef2e1315cadd12, type: 3}
@@ -5919,8 +5919,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7602728379097325743, guid: adffb986f9a9ee145925fcb66d2e240e, type: 3}
+      insertIndex: 5
+      addedObject: {fileID: 1332347313391282500}
   m_SourcePrefab: {fileID: 100100000, guid: adffb986f9a9ee145925fcb66d2e240e, type: 3}
+--- !u!1 &1332347313391282499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7602728379097325743, guid: adffb986f9a9ee145925fcb66d2e240e, type: 3}
+  m_PrefabInstance: {fileID: 1332347313391282498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1332347313391282500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332347313391282499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d365220f73a9354e80addc006fea93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCharacter
+  name: Ellen
+  maxLife: 100
+  baseAttackDamage: 10
+  armorValue: 10
+  equipmentList:
+  - {fileID: 11400000, guid: 828123614b29e4e42a0c04f3d9ec99f7, type: 2}
+  - {fileID: 11400000, guid: 70776ed7bc353c24083aa86afe1dfbc4, type: 2}
+  weaponList:
+  - {fileID: 11400000, guid: 5868de5c4eff2e04787074e11a5b0b52, type: 2}
+  - {fileID: 11400000, guid: 6601f84d02315fe4cb12446cafed0e66, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

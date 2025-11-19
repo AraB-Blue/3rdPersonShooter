@@ -1,11 +1,18 @@
 using UnityEngine;
 
-public class Equipment : MonoBehaviour
+[CreateAssetMenu(fileName = "Equipment", menuName = "ScriptableObjects/Equipment", order = 1)]
+
+public class Equipment : ScriptableObject
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] float maxDurability;
+    [SerializeField] float currentDurability;
+    [SerializeField] float movementSpeed;
+    [SerializeField] float armor;
+
+ 
     void Start()
     {
-        
+        currentDurability = 100f;
     }
 
     // Update is called once per frame
