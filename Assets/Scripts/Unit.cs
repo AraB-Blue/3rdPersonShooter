@@ -11,13 +11,17 @@ public class Unit : MonoBehaviour
     bool hasMoved = false;
     [SerializeField] public bool isFriendly;
     ClickToMove clickToMove;
+    Shooting shooting;
 
     public TMP_Text endTurn;
 
     private void Awake()
     {
         clickToMove = GetComponent<ClickToMove>();
+        shooting = GetComponent<Shooting>();
+
         clickToMove.enabled = false;
+        shooting.enabled = false;
     }
 
     public void Run()
@@ -44,6 +48,15 @@ public class Unit : MonoBehaviour
         if (hasActed || hasAttacked)
         {
             return;
+        }
+
+        if (isFriendly)
+        {
+            shooting.enabled = true;
+        }
+        else
+        {
+            Debug.Log("Ataca pero en malvado");
         }
         StartCoroutine (MostrarAccion(endTurn, characterName + " usa la acción de atacar"));
 

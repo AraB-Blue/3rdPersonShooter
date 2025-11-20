@@ -4,9 +4,16 @@ using System;
 public class Shooting : MonoBehaviour
 {
     
-   public void Shoot ()
+   public void Shoot (Vector3 enemyPosition, float weaponRange)
     {
-        IsOnLoS();
+        if (IsOnLoS(enemyPosition, weaponRange))
+        {
+            Debug.Log("Enemigo en linea de tiro");
+        }
+        else 
+        {
+            Debug.Log("Enemigo no esta en linea de tiro");
+        }
     }
     public bool IsOnLoS(Vector3 enemyPosition, float weaponRange)
     {
@@ -19,10 +26,6 @@ public class Shooting : MonoBehaviour
             if (character != null)
             {
                 return true;
-            }
-            else
-            {
-                return false;
             }
         }
         return false;
