@@ -24,7 +24,7 @@ public class Character : MonoBehaviour
         
     }
 
-    void TakeDamage(float damage)
+    protected void TakeDamage(float damage)
     {
         float finalDamage = damage - armorValue;
         currentLife -= finalDamage;

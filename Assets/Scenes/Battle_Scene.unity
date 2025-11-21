@@ -908,6 +908,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 677352688}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 677352682}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       insertIndex: -1
@@ -2024,6 +2027,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
   m_PrefabInstance: {fileID: 192237035}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &677352688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677352679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d053015dc01a0734fb39a94430bf8f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyCharacter
+  name: 
+  maxLife: 0
+  baseAttackDamage: 0
+  armorValue: 0
 --- !u!1 &765634449
 GameObject:
   m_ObjectHideFlags: 0
@@ -2060,8 +2079,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -111, y: 47}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -108.46629, y: 69.86439}
+  m_SizeDelta: {x: 165.0674, y: 75.7288}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &765634451
 MonoBehaviour:
@@ -2106,7 +2125,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 765634452}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1203163905}
+        m_TargetAssemblyTypeName: TargetSelectionAttack, Assembly-CSharp
+        m_MethodName: ShootTarget1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &765634452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2338,7 +2369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: grenadier 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2772,7 +2803,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: grenadier 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4062,6 +4093,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1203163904}
+  - component: {fileID: 1203163905}
   m_Layer: 5
   m_Name: TargetButtons
   m_TagString: Untagged
@@ -4090,6 +4122,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1203163905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203163903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 074f31daa3d5b8f4582ddc1ddbbd28cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  target_1: {fileID: 1653308259}
+  target_2: {fileID: 677352679}
+  characterShooting: {fileID: 1418998117}
 --- !u!1 &1258483646
 GameObject:
   m_ObjectHideFlags: 0
@@ -4427,8 +4474,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 118, y: 46}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 119.86627, y: 69.364}
+  m_SizeDelta: {x: 163.7325, y: 76.729}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1403058069
 MonoBehaviour:
@@ -4473,7 +4520,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1403058070}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1203163905}
+        m_TargetAssemblyTypeName: TargetSelectionAttack, Assembly-CSharp
+        m_MethodName: ShootTarget2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1403058070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5240,6 +5299,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1653308270}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1653308261}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       insertIndex: -1
@@ -5319,6 +5381,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
   m_PrefabInstance: {fileID: 1653308258}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1653308270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653308259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d053015dc01a0734fb39a94430bf8f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyCharacter
+  name: 
+  maxLife: 0
+  baseAttackDamage: 0
+  armorValue: 0
 --- !u!1 &1669354552
 GameObject:
   m_ObjectHideFlags: 0
