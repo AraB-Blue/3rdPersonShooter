@@ -4,7 +4,7 @@ using System.Collections;
 
 public class Unit : MonoBehaviour
 {
-    [SerializeField] string characterName;
+    [SerializeField] public string characterName;
 
     public bool hasActed = true;
     bool hasAttacked = false;
