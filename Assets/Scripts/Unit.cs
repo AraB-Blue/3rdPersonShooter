@@ -13,6 +13,7 @@ public class Unit : MonoBehaviour
     ClickToMove clickToMove;
     Shooting shooting;
     GameObject targetSelection;
+    PlayerCharacter playerCharacter;
 
     public TMP_Text endTurn;
 
@@ -20,6 +21,7 @@ public class Unit : MonoBehaviour
     {
         clickToMove = GetComponent<ClickToMove>();
         shooting = GetComponent<Shooting>();
+        playerCharacter = GetComponent<PlayerCharacter>();
 
         clickToMove.enabled = false;
         shooting.enabled = false;
@@ -53,6 +55,7 @@ public class Unit : MonoBehaviour
 
         if (isFriendly)
         {
+            playerCharacter.targetSelectionPanel.SetActive(true);
             shooting.enabled = true;
             targetSelection.SetActive(true);
         }
@@ -105,6 +108,7 @@ public class Unit : MonoBehaviour
 
     public void FinishAttack ()
     {
+        playerCharacter.targetSelectionPanel.SetActive(false);
         hasAttacked = true;
     }
     public void FinishAction()

@@ -9,10 +9,12 @@ public class TargetSelectionAttack : MonoBehaviour
     public void ShootTarget1()
     {
         //characterShooting.Shoot();
+        Debug.Log ("Shooting Target 1");
     }
 
     public void ShootTarget2()
     {
+        Debug.Log ("Shooting Target 2");
         //characterShooting.Shoot();
     }
 }
