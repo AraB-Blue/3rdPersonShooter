@@ -4769,9 +4769,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCharacter
   name: Chomper
-  maxLife: 0
-  baseAttackDamage: 0
-  armorValue: 0
+  maxLife: 60
+  baseAttackDamage: 20
+  armorValue: 20
   equipmentList: []
   weaponList: []
 --- !u!1 &1448701944
