@@ -6,11 +6,13 @@ public class PlayerCharacter : Character
 {
 
     float experience;
-    Weapon equippedWeapon;
-    Equipment equippedEquipment;
+    [SerializeField] Weapon equippedWeapon;
+    [SerializeField] Equipment equippedEquipment;
     [SerializeField] List <Equipment> equipmentList = new List<Equipment>();
     [SerializeField] List <Weapon> weaponList = new List<Weapon>();
     public GameObject targetSelectionPanel;
+
+    public Weapon EquippedWeapon => equippedWeapon;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

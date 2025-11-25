@@ -3192,6 +3192,7 @@ MonoBehaviour:
   target_1: {fileID: 1653308259}
   target_2: {fileID: 677352679}
   characterShooting: {fileID: 1332347313391282499}
+  Weapon: {fileID: 0}
 --- !u!1 &972826626
 GameObject:
   m_ObjectHideFlags: 0
@@ -4584,6 +4585,7 @@ MonoBehaviour:
   target_1: {fileID: 1653308259}
   target_2: {fileID: 677352679}
   characterShooting: {fileID: 1418998117}
+  Weapon: {fileID: 0}
 --- !u!1 &1258483646
 GameObject:
   m_ObjectHideFlags: 0
@@ -5209,6 +5211,12 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1418998134}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1418998133}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1418998129}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
       insertIndex: -1
@@ -5323,7 +5331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f0cb3b7b50ad746835514f90de68ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooting
-  particleSparks: {fileID: 1973975253}
+  particleSparks: {fileID: 0}
 --- !u!114 &1418998131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5340,9 +5348,35 @@ MonoBehaviour:
   maxLife: 60
   baseAttackDamage: 20
   armorValue: 20
+  equippedWeapon: {fileID: 0}
+  equippedEquipment: {fileID: 0}
   equipmentList: []
   weaponList: []
   targetSelectionPanel: {fileID: 1203163903}
+--- !u!114 &1418998133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418998117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73ad726cb83548d4c81cea3c4a1845db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChomperEvents
+--- !u!114 &1418998134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418998117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f696134aee93f0a48a434b6df4dae9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChomperGrunt
 --- !u!1 &1448701944
 GameObject:
   m_ObjectHideFlags: 0
@@ -12059,12 +12093,14 @@ MonoBehaviour:
   maxLife: 100
   baseAttackDamage: 10
   armorValue: 10
+  equippedWeapon: {fileID: 0}
+  equippedEquipment: {fileID: 0}
   equipmentList:
-  - {fileID: 11400000, guid: 828123614b29e4e42a0c04f3d9ec99f7, type: 2}
   - {fileID: 11400000, guid: 70776ed7bc353c24083aa86afe1dfbc4, type: 2}
+  - {fileID: 11400000, guid: 828123614b29e4e42a0c04f3d9ec99f7, type: 2}
   weaponList:
-  - {fileID: 11400000, guid: 5868de5c4eff2e04787074e11a5b0b52, type: 2}
   - {fileID: 11400000, guid: 6601f84d02315fe4cb12446cafed0e66, type: 2}
+  - {fileID: 11400000, guid: 5868de5c4eff2e04787074e11a5b0b52, type: 2}
   targetSelectionPanel: {fileID: 892284809}
 --- !u!114 &1332347313391282503
 MonoBehaviour:
@@ -12078,7 +12114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f0cb3b7b50ad746835514f90de68ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooting
-  particleSparks: {fileID: 0}
+  particleSparks: {fileID: 1973975253}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

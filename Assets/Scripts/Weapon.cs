@@ -11,15 +11,7 @@ public class Weapon : ScriptableObject
     [SerializeField] int magazineSize;
     [SerializeField] float weaponRange;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public float WeaponRange => weaponRange;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }
