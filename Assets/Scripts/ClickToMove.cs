@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI; 
+using UnityEngine.EventSystems;
 
 public class ClickToMove : MonoBehaviour
 {
@@ -47,6 +48,9 @@ public class ClickToMove : MonoBehaviour
     private void HandleClick()
     {
         RaycastHit hit;
+
+        if (EventSystem.current.IsPointerOverGameObject())
+                return;
 
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100f))
         {
