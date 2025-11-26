@@ -7,8 +7,8 @@ public class Unit : MonoBehaviour
     [SerializeField] public string characterName;
 
     public bool hasActed = true;
-    bool hasAttacked = false;
-    bool hasMoved = false;
+    public bool hasAttacked = false;
+    public bool hasMoved = false;
     [SerializeField] public bool isFriendly;
     ClickToMove clickToMove;
     Shooting shooting;
@@ -102,6 +102,7 @@ public class Unit : MonoBehaviour
 
     public void FinishMovement ()
     {
+        //StartCoroutine(StopPlayer());
         clickToMove.enabled = false;
         hasMoved = true;
     }
@@ -111,6 +112,12 @@ public class Unit : MonoBehaviour
         playerCharacter.targetSelectionPanel.SetActive(false);
         hasAttacked = true;
     }
+
+    /*IEnumerator StopPlayer()
+    {
+        yield return new WaitForSeconds(3f);
+    }*/
+
     public void FinishAction()
     {
         hasActed = true;

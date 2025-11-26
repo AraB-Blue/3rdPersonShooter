@@ -147,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 32322339}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.51, y: 14.27, z: -8.8}
+  m_LocalPosition: {x: -4.81, y: 12.93, z: -8.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2254,6 +2254,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Unit
   characterName: Grenadier 2
   hasActed: 1
+  hasAttacked: 0
+  hasMoved: 0
   isFriendly: 0
   endTurn: {fileID: 0}
 --- !u!136 &677352685
@@ -5253,6 +5255,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Unit
   characterName: Chomper
   hasActed: 0
+  hasAttacked: 0
+  hasMoved: 0
   isFriendly: 1
   endTurn: {fileID: 482983053}
 --- !u!195 &1418998122
@@ -5969,6 +5973,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Unit
   characterName: Grenadier 1
   hasActed: 1
+  hasAttacked: 0
+  hasMoved: 0
   isFriendly: 0
   endTurn: {fileID: 0}
 --- !u!195 &1653308264
@@ -7127,7 +7133,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -12093,11 +12099,11 @@ MonoBehaviour:
   maxLife: 100
   baseAttackDamage: 10
   armorValue: 10
-  equippedWeapon: {fileID: 0}
-  equippedEquipment: {fileID: 0}
+  equippedWeapon: {fileID: 11400000, guid: 6601f84d02315fe4cb12446cafed0e66, type: 2}
+  equippedEquipment: {fileID: 11400000, guid: 828123614b29e4e42a0c04f3d9ec99f7, type: 2}
   equipmentList:
-  - {fileID: 11400000, guid: 70776ed7bc353c24083aa86afe1dfbc4, type: 2}
   - {fileID: 11400000, guid: 828123614b29e4e42a0c04f3d9ec99f7, type: 2}
+  - {fileID: 11400000, guid: 70776ed7bc353c24083aa86afe1dfbc4, type: 2}
   weaponList:
   - {fileID: 11400000, guid: 6601f84d02315fe4cb12446cafed0e66, type: 2}
   - {fileID: 11400000, guid: 5868de5c4eff2e04787074e11a5b0b52, type: 2}

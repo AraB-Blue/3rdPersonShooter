@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(Unit))]
 [RequireComponent(typeof(Shooting))]
@@ -10,6 +11,8 @@ public class EnemyAI : MonoBehaviour
     private Shooting shooting;
     [SerializeField] private float visionRange = 5f;
     private float attackRange;
+    public float weaponRange;
+    NavMeshAgent agent;
 
     void Start()
     {
@@ -20,6 +23,7 @@ public class EnemyAI : MonoBehaviour
     {
         unit = GetComponent<Unit>();
         shooting = GetComponent<Shooting>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
@@ -41,6 +45,7 @@ public class EnemyAI : MonoBehaviour
     {
         Unit target = FindClosestPlayerUnit(); //Encontrar aliado cercano
 
+        //sin aliados cercanos, salta turno
         if (target ==null)
         {
             Debug.Log(unit.characterName + "no encuentra objetivos validos");
@@ -48,22 +53,69 @@ public class EnemyAI : MonoBehaviour
             yield break;
         }
 
+        //atacar en linea de vision
         float distanceToTarget = Vector3.Distance(transform.position, target.transform.position);
 
         if (distanceToTarget <= attackRange && hasLineOfSight(target))
         {
             yield return AttackTarget(target);
         }
+
+        else //mover personaje que este cerca para atacar
+        {
+            yield return MoveTowardTarget(target.transform.position);
+
+            //volver a intentar disparar
+            distanceToTarget = Vector3.Distance(transform.position, target.transform.position);
+
+            if (distanceToTarget <= attackRange && hasLineOfSight(target))
+            {
+                yield return AttackTarget(target);
+            }
+            else
+                unit.FinishAction();
+        }
+    }
+
+    private IEnumerator MoveTowardTarget(Vector3 targetPosition)
+    {
+        Debug.Log(unit.characterName + "se mueve buscando a su objetivo:");
+
+        agent.destination = targetPosition;
+
+        yield return new WaitForSeconds(5);
+
+        unit.FinishMovement();
     }
 
     private IEnumerator AttackTarget(Unit target)
     {
-        throw new NotImplementedException();
+        Debug.Log(unit.characterName + "ataca a" + target.characterName);
+
+        Vector3 lookDir = target.transform.position - transform.position;
+        lookDir.y = 0f;
+        if(lookDir !=Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(lookDir);
+        }
+        
+        shooting.Shoot(target.transform.position, attackRange);
+
+        yield return new WaitForSeconds(0.2f);
+
+        if (unit.hasMoved)
+        {
+            unit.FinishAttack();
+            unit.FinishAction();
+        }
+        else
+            unit.FinishAttack();
+
     }
 
     private bool hasLineOfSight(Unit target)
     {
-        throw new NotImplementedException();
+       return shooting.IsOnLoS(target.transform.position, weaponRange);
     }
 
 
