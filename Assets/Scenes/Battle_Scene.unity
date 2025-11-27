@@ -1843,7 +1843,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 348323412}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 892284811}
+        m_TargetAssemblyTypeName: TargetSelectionAttack, Assembly-CSharp
+        m_MethodName: ShootTarget1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &348323412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4971,7 +4983,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1400231149}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 892284811}
+        m_TargetAssemblyTypeName: TargetSelectionAttack, Assembly-CSharp
+        m_MethodName: ShootTarget2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1400231149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5352,8 +5376,8 @@ MonoBehaviour:
   maxLife: 60
   baseAttackDamage: 20
   armorValue: 20
-  equippedWeapon: {fileID: 0}
-  equippedEquipment: {fileID: 0}
+  equippedWeapon: {fileID: 11400000, guid: 5868de5c4eff2e04787074e11a5b0b52, type: 2}
+  equippedEquipment: {fileID: 11400000, guid: 70776ed7bc353c24083aa86afe1dfbc4, type: 2}
   equipmentList: []
   weaponList: []
   targetSelectionPanel: {fileID: 1203163903}
@@ -5946,6 +5970,9 @@ PrefabInstance:
       addedObject: {fileID: 1653308270}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1653308272}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1653308261}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       insertIndex: -1
@@ -6043,6 +6070,19 @@ MonoBehaviour:
   maxLife: 200
   baseAttackDamage: 30
   armorValue: 20
+--- !u!114 &1653308272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653308259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f0cb3b7b50ad746835514f90de68ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shooting
+  particleSparks: {fileID: 0}
 --- !u!1 &1669354552
 GameObject:
   m_ObjectHideFlags: 0

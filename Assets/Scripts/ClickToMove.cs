@@ -47,10 +47,12 @@ public class ClickToMove : MonoBehaviour
 
     private void HandleClick()
     {
+
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+            return;
+
         RaycastHit hit;
 
-        if (EventSystem.current.IsPointerOverGameObject())
-                return;
 
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100f))
         {
