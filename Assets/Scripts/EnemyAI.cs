@@ -10,13 +10,13 @@ public class EnemyAI : MonoBehaviour
     private Unit unit;
     private Shooting shooting;
     [SerializeField] private float visionRange = 5f;
-    private float attackRange;
+    [SerializeField] private float attackRange;
     public float weaponRange;
     NavMeshAgent agent;
 
     void Start()
     {
-        
+        attackRange = weaponRange;
     }
 
     private void Awake()
@@ -81,11 +81,18 @@ public class EnemyAI : MonoBehaviour
     {
         Debug.Log(unit.characterName + "se mueve buscando a su objetivo:");
 
+        agent.isStopped = false;
+
         agent.destination = targetPosition;
 
-        yield return new WaitForSeconds(5);
+         while (agent.pathPending || agent.remainingDistance > agent.stoppingDistance)
+         {
+            yield return null; // esperar al siguiente frame
+         }
+        
+    agent.isStopped = true;
 
-        unit.FinishMovement();
+    unit.FinishMovement();
     }
 
     private IEnumerator AttackTarget(Unit target)

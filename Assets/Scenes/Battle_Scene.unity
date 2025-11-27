@@ -2350,7 +2350,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0269f3f77bf2a04a9490481792f0c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  visionRange: 5
+  visionRange: 6
+  attackRange: 5
   weaponRange: 5
 --- !u!114 &677352692
 MonoBehaviour:
@@ -6155,7 +6156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0269f3f77bf2a04a9490481792f0c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  visionRange: 5
+  visionRange: 6
+  attackRange: 5
   weaponRange: 5
 --- !u!114 &1653308275
 MonoBehaviour:
