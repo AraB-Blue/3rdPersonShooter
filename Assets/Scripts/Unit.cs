@@ -6,7 +6,7 @@ public class Unit : MonoBehaviour
 {
     [SerializeField] public string characterName;
 
-    public bool hasActed = true;
+    public bool hasActed = false;
     public bool hasAttacked = false;
     public bool hasMoved = false;
     [SerializeField] public bool isFriendly;
@@ -102,21 +102,34 @@ public class Unit : MonoBehaviour
 
     public void FinishMovement ()
     {
-        //StartCoroutine(StopPlayer());
+        
         clickToMove.enabled = false;
         hasMoved = true;
+
+        if (!isFriendly)
+        {
+            FinishAction();
+        }
+
     }
 
     public void FinishAttack ()
     {
         playerCharacter.targetSelectionPanel.SetActive(false);
         hasAttacked = true;
+
+        if (!isFriendly)
+        {
+            playerCharacter.targetSelectionPanel.SetActive(false);
+        }
+
+        if (!isFriendly)
+        {
+            FinishAction();
+        }
     }
 
-    /*IEnumerator StopPlayer()
-    {
-        yield return new WaitForSeconds(3f);
-    }*/
+
 
     public void FinishAction()
     {

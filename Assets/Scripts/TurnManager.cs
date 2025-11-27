@@ -59,7 +59,7 @@ public class TurnManager : MonoBehaviour
     {
         foreach (Unit unit in units)
         {
-            unit.hasActed = false;
+            unit.StartTurnForThisUnit();
         
         }
     }

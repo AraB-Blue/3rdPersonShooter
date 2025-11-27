@@ -12,6 +12,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float visionRange = 5f;
     [SerializeField] private float attackRange;
     public float weaponRange;
+    private bool isActing = false;
     NavMeshAgent agent;
 
     void Start()
@@ -35,7 +36,7 @@ public class EnemyAI : MonoBehaviour
             return;
         }
 
-        if (!unit.hasActed)
+        if (!unit.hasActed && !isActing)
         {
             StartCoroutine(DoenemyTurn());
         }
@@ -43,6 +44,8 @@ public class EnemyAI : MonoBehaviour
 
     IEnumerator DoenemyTurn()
     {
+        isActing = true;
+        
         Unit target = FindClosestPlayerUnit(); //Encontrar aliado cercano
 
         //sin aliados cercanos, salta turno
@@ -75,6 +78,8 @@ public class EnemyAI : MonoBehaviour
             else
                 unit.FinishAction();
         }
+
+        isActing = false;
     }
 
     private IEnumerator MoveTowardTarget(Vector3 targetPosition)
