@@ -22,6 +22,8 @@ public class Shooting : MonoBehaviour
     {
 
         RaycastHit hit;
+        Vector3 direction = (enemyPosition - transform.position).normalized;
+        Debug.DrawRay(transform.position, direction * weaponRange, Color.red, 1f);
         if (Physics.Raycast(transform.position, enemyPosition, out hit, weaponRange))
         {
             Character character = hit.collider.GetComponent<Character>();

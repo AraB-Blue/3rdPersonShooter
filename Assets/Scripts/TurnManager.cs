@@ -39,7 +39,7 @@ public class TurnManager : MonoBehaviour
     private void StartEnemyTurn()
     {
         isPlayerTurn = false;
-        ResetUnits(playerUnits);
+        ResetUnits(enemyUnits);
         StartCoroutine(MostrarTurno(turnoEnemigo, "turno de los enemigos"));
 
         Debug.Log("Turno del enemigo");
