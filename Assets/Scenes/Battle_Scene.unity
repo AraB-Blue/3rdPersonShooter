@@ -908,6 +908,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 677352690}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 677352688}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       insertIndex: -1
@@ -921,6 +924,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 677352685}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 677352689}
   m_SourcePrefab: {fileID: 100100000, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
 --- !u!1 &289783294
 GameObject:
@@ -2314,6 +2320,35 @@ MonoBehaviour:
   maxLife: 200
   baseAttackDamage: 30
   armorValue: 20
+  equippedWeapon: {fileID: 11400000, guid: 5868de5c4eff2e04787074e11a5b0b52, type: 2}
+  equippedEquipment: {fileID: 11400000, guid: 70776ed7bc353c24083aa86afe1dfbc4, type: 2}
+--- !u!114 &677352689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677352679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f0cb3b7b50ad746835514f90de68ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shooting
+  particleSparks: {fileID: 0}
+--- !u!114 &677352690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677352679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0269f3f77bf2a04a9490481792f0c98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  visionRange: 5
+  weaponRange: 0
 --- !u!1 &765634449
 GameObject:
   m_ObjectHideFlags: 0
@@ -5376,8 +5411,8 @@ MonoBehaviour:
   maxLife: 60
   baseAttackDamage: 20
   armorValue: 20
-  equippedWeapon: {fileID: 11400000, guid: 5868de5c4eff2e04787074e11a5b0b52, type: 2}
-  equippedEquipment: {fileID: 11400000, guid: 70776ed7bc353c24083aa86afe1dfbc4, type: 2}
+  equippedWeapon: {fileID: 11400000, guid: 6601f84d02315fe4cb12446cafed0e66, type: 2}
+  equippedEquipment: {fileID: 11400000, guid: 828123614b29e4e42a0c04f3d9ec99f7, type: 2}
   equipmentList: []
   weaponList: []
   targetSelectionPanel: {fileID: 1203163903}
@@ -5967,6 +6002,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1653308273}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1653308270}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       insertIndex: -1
@@ -6070,6 +6108,8 @@ MonoBehaviour:
   maxLife: 200
   baseAttackDamage: 30
   armorValue: 20
+  equippedWeapon: {fileID: 11400000, guid: 5868de5c4eff2e04787074e11a5b0b52, type: 2}
+  equippedEquipment: {fileID: 11400000, guid: 70776ed7bc353c24083aa86afe1dfbc4, type: 2}
 --- !u!114 &1653308272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6083,6 +6123,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooting
   particleSparks: {fileID: 0}
+--- !u!114 &1653308273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653308259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0269f3f77bf2a04a9490481792f0c98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  visionRange: 5
+  weaponRange: 0
 --- !u!1 &1669354552
 GameObject:
   m_ObjectHideFlags: 0
