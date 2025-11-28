@@ -23,12 +23,15 @@ public class Shooting : MonoBehaviour
 
         RaycastHit hit;
         Vector3 direction = (enemyPosition - transform.position).normalized;
+        
         Debug.DrawRay(transform.position, direction * weaponRange, Color.red, 1f);
-        if (Physics.Raycast(transform.position, enemyPosition, out hit, weaponRange))
+        
+        if (Physics.Raycast(transform.position, direction, out hit, weaponRange))
         {
-            Character character = hit.collider.GetComponent<Character>();
             Debug.Log("Preparado para disparar");
-
+            
+            Character character = hit.collider.GetComponent<Character>();
+            
             if (character != null)
             {
                 return true;
@@ -39,7 +42,7 @@ public class Shooting : MonoBehaviour
 
     private void GenerateHitParticles(Vector3 hitPoint)
     {
-        // Busca el prefab de partículas en Resources o úsalo si está asignado
+        // Busca el prefab de partï¿½culas en Resources o ï¿½salo si estï¿½ asignado
         GameObject particlesPrefab = Resources.Load<GameObject>("Sparks");
 
         if (particlesPrefab != null)
@@ -49,13 +52,13 @@ public class Shooting : MonoBehaviour
             if (ps != null)
             {
                 ps.Play();
-                // Destruye el objeto después de que terminen las partículas
+                // Destruye el objeto despuï¿½s de que terminen las partï¿½culas
                 Destroy(particles, ps.main.duration + ps.main.startLifetime.constantMax);
             }
         }
         else
         {
-            Debug.LogWarning("No se encontró el prefab 'Sparks' en Resources");
+            Debug.LogWarning("No se encontro el prefab 'Sparks' en Resources");
         }
     }
 }

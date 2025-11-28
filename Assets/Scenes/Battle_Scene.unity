@@ -5451,8 +5451,12 @@ MonoBehaviour:
   armorValue: 20
   equippedWeapon: {fileID: 11400000, guid: 6601f84d02315fe4cb12446cafed0e66, type: 2}
   equippedEquipment: {fileID: 11400000, guid: 828123614b29e4e42a0c04f3d9ec99f7, type: 2}
-  equipmentList: []
-  weaponList: []
+  equipmentList:
+  - {fileID: 11400000, guid: 828123614b29e4e42a0c04f3d9ec99f7, type: 2}
+  - {fileID: 11400000, guid: 70776ed7bc353c24083aa86afe1dfbc4, type: 2}
+  weaponList:
+  - {fileID: 11400000, guid: 5868de5c4eff2e04787074e11a5b0b52, type: 2}
+  - {fileID: 11400000, guid: 6601f84d02315fe4cb12446cafed0e66, type: 2}
   targetSelectionPanel: {fileID: 1203163903}
 --- !u!114 &1418998133
 MonoBehaviour:
