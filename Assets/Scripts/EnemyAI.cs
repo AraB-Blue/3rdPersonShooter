@@ -101,6 +101,7 @@ public class EnemyAI : MonoBehaviour
         }
 
         agent.isStopped = true;
+        animator.SetFloat("forwardMovement", 0f);
         unit.FinishMovement(); // para de moverse
     }
 
