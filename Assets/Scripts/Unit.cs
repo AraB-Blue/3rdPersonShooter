@@ -12,7 +12,7 @@ public class Unit : MonoBehaviour
     [SerializeField] public bool isFriendly;
     ClickToMove clickToMove;
     Shooting shooting;
-    GameObject targetSelection;
+    [SerializeField] GameObject targetSelection;
     PlayerCharacter playerCharacter;
 
     public TMP_Text endTurn;

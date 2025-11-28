@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using TMPro;
 
 [RequireComponent(typeof(Unit))]
 [RequireComponent(typeof(Shooting))]
@@ -15,6 +16,7 @@ public class EnemyAI : MonoBehaviour
     private bool isActing = false;
     NavMeshAgent agent;
     Animator animator;
+    public TMP_Text EvilAttack;
 
     void Start()
     {
@@ -120,7 +122,10 @@ public class EnemyAI : MonoBehaviour
         shooting.Shoot(target.transform.position, attackRange);
         yield return new WaitForSeconds(0.2f);
 
-        unit.FinishAttack();  // ataca
+        StartCoroutine (AttackinEvil(EvilAttack, "el enemigo ha atacado"));
+
+
+        unit.FinishAttack();  // se ha pegado a tortas
     }
 
 
@@ -149,5 +154,15 @@ public class EnemyAI : MonoBehaviour
 
         return closest;
 
+    }
+
+    IEnumerator AttackinEvil (TMP_Text textoUI, string mensaje)
+    {
+        textoUI.text = mensaje;
+        textoUI.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(3f);
+
+        textoUI.gameObject.SetActive(false);
     }
 }
