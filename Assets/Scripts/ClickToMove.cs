@@ -41,16 +41,8 @@ public class ClickToMove : MonoBehaviour
         }
 
         //velocidadX = agent.velocity;
-        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
-        {
-            // Llegó al destino
-            animator.SetFloat("forwardMovement", 0f);
-        }
-        else
-        {
-            // Todavía se mueve
-            animator.SetFloat("forwardMovement", agent.velocity.magnitude);
-        }
+        animator.SetFloat("forwardMovement", agent.velocity.magnitude);
+
     }
 
     private void HandleClick()
