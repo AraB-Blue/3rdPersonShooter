@@ -42,7 +42,7 @@ public class Shooting : MonoBehaviour
 
     private void GenerateHitParticles(Vector3 hitPoint)
     {
-        // Busca el prefab de part�culas en Resources o �salo si est� asignado
+        // Prefab particulas
         GameObject particlesPrefab = Resources.Load<GameObject>("Sparks");
 
         if (particlesPrefab != null)
@@ -52,7 +52,7 @@ public class Shooting : MonoBehaviour
             if (ps != null)
             {
                 ps.Play();
-                // Destruye el objeto despu�s de que terminen las part�culas
+                // Destruye particulas
                 Destroy(particles, ps.main.duration + ps.main.startLifetime.constantMax);
             }
         }
