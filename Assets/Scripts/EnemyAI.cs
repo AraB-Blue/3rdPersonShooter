@@ -14,6 +14,7 @@ public class EnemyAI : MonoBehaviour
     public float weaponRange;
     private bool isActing = false;
     NavMeshAgent agent;
+    Animator animator;
 
     void Start()
     {
@@ -25,6 +26,7 @@ public class EnemyAI : MonoBehaviour
         unit = GetComponent<Unit>();
         shooting = GetComponent<Shooting>();
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -88,11 +90,13 @@ public class EnemyAI : MonoBehaviour
     {
         Debug.Log(unit.characterName + " se mueve buscando a su objetivo:");
 
+        
         agent.isStopped = false;
         agent.destination = targetPosition;
 
         while (agent.pathPending || agent.remainingDistance > agent.stoppingDistance)
         {
+            animator.SetFloat("forwardMovement", agent.velocity.magnitude);
             yield return null;
         }
 

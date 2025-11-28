@@ -313,8 +313,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1973975254}
-  - {fileID: 148475428}
   - {fileID: 2138258055}
+  - {fileID: 138884277}
   - {fileID: 1860273676}
   - {fileID: 45222805}
   - {fileID: 1364619417}
@@ -710,11 +710,12 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 148475428}
   - {fileID: 831779760}
   - {fileID: 1448701945}
   - {fileID: 852470277}
   - {fileID: 519603736}
-  m_Father: {fileID: 148475428}
+  m_Father: {fileID: 121492309}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -810,12 +811,11 @@ Transform:
   m_GameObject: {fileID: 148475427}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 457, y: 0, z: -1.8221302}
+  m_LocalPosition: {x: -504.22003, y: -308.5, z: -9.43659}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 138884277}
-  m_Father: {fileID: 121492309}
+  m_Children: []
+  m_Father: {fileID: 138884277}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &148475429
 MonoBehaviour:
@@ -857,7 +857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.5499735
+      value: -4.55
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -865,7 +865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.61446
+      value: 20.71
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -927,7 +927,7 @@ PrefabInstance:
       addedObject: {fileID: 677352681}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 677352680}
+      addedObject: {fileID: 677352694}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 677352685}
@@ -2213,33 +2213,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
   m_PrefabInstance: {fileID: 192237035}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &677352680
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677352679}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!195 &677352681
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2254,7 +2227,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -2368,6 +2341,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClickToMove
   moveSpeed: 6
   destinationCapsule: {fileID: 0}
+--- !u!114 &677352694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677352679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 395a39ee5b900bb4e8b866793a856481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GrenadierEvents
 --- !u!1 &765634449
 GameObject:
   m_ObjectHideFlags: 0
@@ -6078,7 +6063,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -7264,7 +7249,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
