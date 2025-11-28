@@ -26,7 +26,25 @@ public class Unit : MonoBehaviour
         clickToMove.enabled = false;
         shooting.enabled = false;
     }
+    public void StartTurnForThisUnit()
+    {
+        hasActed = false;
+        hasAttacked = false;
+        hasMoved = false;
+    }
 
+    public void FinishMovement ()
+    {
+        
+        clickToMove.enabled = false;
+        hasMoved = true;
+
+        if (!isFriendly)
+        {
+            FinishAction();
+        }
+
+    }
     public void Run()
     {
         if (hasActed || hasMoved)
@@ -93,25 +111,7 @@ public class Unit : MonoBehaviour
     }
 
 
-    public void StartTurnForThisUnit()
-    {
-        hasActed = false;
-        hasAttacked = false;
-        hasMoved = false;
-    }
-
-    public void FinishMovement ()
-    {
-        
-        clickToMove.enabled = false;
-        hasMoved = true;
-
-        if (!isFriendly)
-        {
-            FinishAction();
-        }
-
-    }
+   
 
     public void FinishAttack ()
     {
@@ -123,10 +123,10 @@ public class Unit : MonoBehaviour
             playerCharacter.targetSelectionPanel.SetActive(false);
         }
 
-        if (!isFriendly)
+        /*if (!isFriendly)
         {
             FinishAction();
-        }
+        }*/
     }
 
 

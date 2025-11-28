@@ -312,6 +312,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1973975254}
   - {fileID: 148475428}
   - {fileID: 2138258055}
   - {fileID: 1860273676}
@@ -914,6 +915,9 @@ PrefabInstance:
       addedObject: {fileID: 677352690}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 677352689}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 677352688}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       insertIndex: -1
@@ -927,9 +931,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 677352685}
-    - targetCorrespondingSourceObject: {fileID: 100002, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 677352689}
   m_SourcePrefab: {fileID: 100100000, guid: 887cc9cbcc10e8c45b6262198cc15ee6, type: 3}
 --- !u!1 &289783294
 GameObject:
@@ -2337,7 +2338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f0cb3b7b50ad746835514f90de68ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooting
-  particleSparks: {fileID: 0}
+  particleSparks: {fileID: 1973975253}
 --- !u!114 &677352690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2350,7 +2351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0269f3f77bf2a04a9490481792f0c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  visionRange: 6
+  visionRange: 20
   attackRange: 5
   weaponRange: 5
 --- !u!114 &677352692
@@ -6143,7 +6144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f0cb3b7b50ad746835514f90de68ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooting
-  particleSparks: {fileID: 0}
+  particleSparks: {fileID: 1973975253}
 --- !u!114 &1653308273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6156,7 +6157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0269f3f77bf2a04a9490481792f0c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  visionRange: 6
+  visionRange: 20
   attackRange: 5
   weaponRange: 5
 --- !u!114 &1653308275
@@ -7263,7 +7264,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -12014,11 +12015,11 @@ Transform:
   m_GameObject: {fileID: 1973975251}
   serializedVersion: 2
   m_LocalRotation: {x: 0.00000044703475, y: 0.00000002748532, z: -0.000000029802315, w: -1}
-  m_LocalPosition: {x: 0.09000015, y: 1.7379951, z: -1.7200003}
+  m_LocalPosition: {x: -1.5499897, y: 15.9699955, z: -8.495541}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 536741837}
+  m_Father: {fileID: 121492309}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -360}
 --- !u!1 &2025275715
 GameObject:
@@ -12196,10 +12197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7602728379097758927, guid: adffb986f9a9ee145925fcb66d2e240e, type: 3}
-      insertIndex: 0
-      addedObject: {fileID: 1973975254}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7602728379097325743, guid: adffb986f9a9ee145925fcb66d2e240e, type: 3}
       insertIndex: 3

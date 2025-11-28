@@ -8,6 +8,7 @@ public class TurnManager : MonoBehaviour
 {
     public static TurnManager Instance; //todos pueden acceder
     public bool isPlayerTurn = true;
+    
 
     public List<Unit> enemyUnits = new List<Unit>();
     public List<Unit> playerUnits = new List<Unit>();
@@ -42,6 +43,14 @@ public class TurnManager : MonoBehaviour
         ResetUnits(enemyUnits);
         StartCoroutine(MostrarTurno(turnoEnemigo, "turno de los enemigos"));
 
+        foreach (Unit u in enemyUnits)
+        {
+            EnemyAI ai = u.GetComponent<EnemyAI>();
+            if (ai != null)
+                ai.enabled = true;  // por si estaba desactivado
+        }
+
+
         Debug.Log("Turno del enemigo");
     }
 
@@ -66,6 +75,7 @@ public class TurnManager : MonoBehaviour
 
     bool AllUnitsActed (List <Unit> units)
     {
+    
         foreach (var u in units)
         {
             if (!u.hasActed)
