@@ -12,8 +12,9 @@ public class Unit : MonoBehaviour
     [SerializeField] public bool isFriendly;
     ClickToMove clickToMove;
     Shooting shooting;
-    [SerializeField] GameObject targetSelection;
+    GameObject targetSelection;
     PlayerCharacter playerCharacter;
+    
 
     public TMP_Text endTurn;
 
@@ -62,6 +63,7 @@ public class Unit : MonoBehaviour
         }
             StartCoroutine (MostrarAccion(endTurn, characterName + " usa la acción de correr"));
             Debug.Log(characterName + " usa la accion correr"); 
+        FinishAction();
     }
 
     public void Attack()
@@ -115,13 +117,16 @@ public class Unit : MonoBehaviour
 
     public void FinishAttack ()
     {
-        playerCharacter.targetSelectionPanel.SetActive(false);
-        hasAttacked = true;
-
+        //playerCharacter.targetSelectionPanel.SetActive(false);
+        
         if (!isFriendly)
         {
             playerCharacter.targetSelectionPanel.SetActive(false);
         }
+        
+        hasAttacked = true;
+
+        FinishAction();
 
         /*if (!isFriendly)
         {
