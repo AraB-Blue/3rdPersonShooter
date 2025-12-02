@@ -12,8 +12,8 @@ public class Unit : MonoBehaviour
     [SerializeField] public bool isFriendly;
     ClickToMove clickToMove;
     Shooting shooting;
-    GameObject targetSelection;
-    PlayerCharacter playerCharacter;
+    [SerializeField] GameObject targetSelection;
+    [SerializeField] PlayerCharacter playerCharacter;
     
 
     public TMP_Text endTurn;
@@ -76,8 +76,9 @@ public class Unit : MonoBehaviour
         if (isFriendly)
         {
             playerCharacter.targetSelectionPanel.SetActive(true);
-            shooting.enabled = true;
             targetSelection.SetActive(true);
+            shooting.enabled = true;
+            
         }
         else
         {

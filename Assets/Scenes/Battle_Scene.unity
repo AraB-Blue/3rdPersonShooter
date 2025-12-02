@@ -2259,6 +2259,8 @@ MonoBehaviour:
   hasAttacked: 0
   hasMoved: 0
   isFriendly: 0
+  targetSelection: {fileID: 0}
+  playerCharacter: {fileID: 0}
   endTurn: {fileID: 482983053}
 --- !u!136 &677352685
 CapsuleCollider:
@@ -5460,6 +5462,8 @@ MonoBehaviour:
   hasAttacked: 0
   hasMoved: 0
   isFriendly: 1
+  targetSelection: {fileID: 1203163903}
+  playerCharacter: {fileID: 0}
   endTurn: {fileID: 482983053}
 --- !u!195 &1418998122
 NavMeshAgent:
@@ -6201,6 +6205,8 @@ MonoBehaviour:
   hasAttacked: 0
   hasMoved: 0
   isFriendly: 0
+  targetSelection: {fileID: 0}
+  playerCharacter: {fileID: 0}
   endTurn: {fileID: 482983053}
 --- !u!195 &1653308264
 NavMeshAgent:
@@ -7516,6 +7522,10 @@ PrefabInstance:
       propertyPath: endTurn
       value: 
       objectReference: {fileID: 482983053}
+    - target: {fileID: 2744347132295501156, guid: adffb986f9a9ee145925fcb66d2e240e, type: 3}
+      propertyPath: targetSelection
+      value: 
+      objectReference: {fileID: 892284809}
     - target: {fileID: 7602728379097325743, guid: adffb986f9a9ee145925fcb66d2e240e, type: 3}
       propertyPath: m_Name
       value: Ellen
