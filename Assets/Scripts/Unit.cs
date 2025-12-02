@@ -13,7 +13,7 @@ public class Unit : MonoBehaviour
     ClickToMove clickToMove;
     Shooting shooting;
     [SerializeField] GameObject targetSelection;
-    [SerializeField] PlayerCharacter playerCharacter;
+    PlayerCharacter playerCharacter;
     
 
     public TMP_Text endTurn;
