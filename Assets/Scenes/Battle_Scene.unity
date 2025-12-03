@@ -2260,7 +2260,6 @@ MonoBehaviour:
   hasMoved: 0
   isFriendly: 0
   targetSelection: {fileID: 0}
-  playerCharacter: {fileID: 0}
   endTurn: {fileID: 482983053}
 --- !u!136 &677352685
 CapsuleCollider:
@@ -4657,7 +4656,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 53.999817, y: -245}
+  m_AnchoredPosition: {x: 53.999817, y: -245.00005}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1203163905
@@ -5463,7 +5462,6 @@ MonoBehaviour:
   hasMoved: 0
   isFriendly: 1
   targetSelection: {fileID: 1203163903}
-  playerCharacter: {fileID: 0}
   endTurn: {fileID: 482983053}
 --- !u!195 &1418998122
 NavMeshAgent:
@@ -6206,7 +6204,6 @@ MonoBehaviour:
   hasMoved: 0
   isFriendly: 0
   targetSelection: {fileID: 0}
-  playerCharacter: {fileID: 0}
   endTurn: {fileID: 482983053}
 --- !u!195 &1653308264
 NavMeshAgent:

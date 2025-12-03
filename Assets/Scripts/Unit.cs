@@ -118,15 +118,16 @@ public class Unit : MonoBehaviour
 
     public void FinishAttack ()
     {
-        //playerCharacter.targetSelectionPanel.SetActive(false);
         
-        if (isFriendly)
+        
+        if (!isFriendly)
         {
             playerCharacter.targetSelectionPanel.SetActive(false);
         }
         
         hasAttacked = true;
 
+        //playerCharacter.targetSelectionPanel.SetActive(false);
         FinishAction();
 
         /*if (!isFriendly)
