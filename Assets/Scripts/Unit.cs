@@ -120,7 +120,7 @@ public class Unit : MonoBehaviour
     {
         //playerCharacter.targetSelectionPanel.SetActive(false);
         
-        if (!isFriendly)
+        if (isFriendly)
         {
             playerCharacter.targetSelectionPanel.SetActive(false);
         }
