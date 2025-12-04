@@ -52,9 +52,6 @@ public class ClickToMove : MonoBehaviour
             }
         }
 
-        
-
-
     }
 
     private void HandleClick()
@@ -77,7 +74,7 @@ public class ClickToMove : MonoBehaviour
         {
             destinationCapsule.position = hit.point;
             agent.destination = destinationCapsule.position;
-            hit.collider.GetComponent<Unit>();
+            //hit.collider.GetComponent<Unit>();
         }
         
     }
