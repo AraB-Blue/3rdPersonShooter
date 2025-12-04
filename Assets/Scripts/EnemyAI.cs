@@ -120,16 +120,14 @@ public class EnemyAI : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(lookDir);
         }
 
-        if (animator !=null)
-        {
-            animator.SetTrigger("Attack");
-        }
 
         yield return new WaitForSeconds(0.2f);
     
         shooting.Shoot(target.transform.position, attackRange);
         
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(0.1f);
+
+        
 
         
 
@@ -137,7 +135,7 @@ public class EnemyAI : MonoBehaviour
 
         unit.FinishAttack();  // se ha pegado a tortas
                               
-        //animator.ResetTrigger("Attack");
+    
 
 
     }
