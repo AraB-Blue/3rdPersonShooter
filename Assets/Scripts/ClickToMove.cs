@@ -32,16 +32,24 @@ public class ClickToMove : MonoBehaviour
     {
        
         if (Input.GetMouseButtonDown(1))
-        {
-            
-            HandleClick();
-            
-            Unit unit = GetComponent<Unit>();
-            unit.FinishMovement();
+        { 
+            HandleClick(); 
         }
 
         //velocidadX = agent.velocity;
         animator.SetFloat("forwardMovement", agent.velocity.magnitude);
+
+        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+        {
+            {
+                Unit unit = GetComponent<Unit>();
+                unit.FinishMovement();
+
+            }
+        }
+
+        
+
 
     }
 
