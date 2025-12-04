@@ -56,7 +56,14 @@ public class ClickToMove : MonoBehaviour
     private void HandleClick()
     {
 
+        if (!enabled) return;
+
         if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        Unit unit = GetComponent<Unit>();
+
+        if (unit.hasMoved)
             return;
 
         RaycastHit hit;
@@ -66,7 +73,7 @@ public class ClickToMove : MonoBehaviour
         {
             destinationCapsule.position = hit.point;
             agent.destination = destinationCapsule.position;
-            hit.collider.GetComponent<Unit>();
+            //hit.collider.GetComponent<Unit>();
         }
         
     }

@@ -35,6 +35,7 @@ public class Shooting : MonoBehaviour
     {
 
         RaycastHit hit;
+
         Vector3 direction = (enemyPosition - transform.position).normalized;
         
         Debug.DrawRay(transform.position, direction * weaponRange, Color.red, 1f);

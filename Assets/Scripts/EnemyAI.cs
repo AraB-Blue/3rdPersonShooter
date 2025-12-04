@@ -62,6 +62,7 @@ public class EnemyAI : MonoBehaviour
 
         float distanceToTarget = Vector3.Distance(transform.position, target.transform.position);
 
+       
         // Intentar atacar inmediatamente
         if (distanceToTarget <= attackRange && hasLineOfSight(target))
         {

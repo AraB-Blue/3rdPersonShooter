@@ -8,6 +8,12 @@ public class UiUnitSelectionToggle : MonoBehaviour
 
     void Update()
     {
+        if (!TurnManager.Instance.isPlayerTurn)
+        {
+            DeactivateAllUIElements();
+            return;
+        }
+        
         string unitSelection = UnitSelection.Instance.selectedUnit != null
             ? UnitSelection.Instance.selectedUnit.name
             : null;

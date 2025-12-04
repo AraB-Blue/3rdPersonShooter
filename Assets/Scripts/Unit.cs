@@ -34,18 +34,7 @@ public class Unit : MonoBehaviour
         hasMoved = false;
     }
 
-    public void FinishMovement ()
-    {
-        
-        clickToMove.enabled = false;
-        hasMoved = true;
-
-        if (!isFriendly)
-        {
-            FinishAction();
-        }
-
-    }
+    
     public void Run()
     {
         if (hasActed || hasMoved)
@@ -53,7 +42,7 @@ public class Unit : MonoBehaviour
             return;
         }
 
-        if (isFriendly)
+        if (isFriendly && !hasActed && !hasMoved)
         {
             clickToMove.enabled = true;
         }
@@ -114,7 +103,18 @@ public class Unit : MonoBehaviour
     }
 
 
-   
+   public void FinishMovement ()
+    {
+        
+        clickToMove.enabled = false;
+        hasMoved = true;
+
+        if (!isFriendly)
+        {
+            FinishAction();
+        }
+
+    }
 
     public void FinishAttack ()
     {
