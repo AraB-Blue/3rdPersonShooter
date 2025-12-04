@@ -2326,6 +2326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooting
   particleSparks: {fileID: 698471145442725108, guid: afb575c24d446704c97c739c11bfe1a7, type: 3}
+  animator: {fileID: 0}
 --- !u!114 &677352690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5390,7 +5391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.47001
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5398,7 +5399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.55554
+      value: 1.99
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5446,12 +5447,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1418998134}
-    - targetCorrespondingSourceObject: {fileID: 100002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1418998133}
-    - targetCorrespondingSourceObject: {fileID: 100002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1418998129}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
       insertIndex: -1
@@ -5462,6 +5457,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1418998131}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1418998137}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1418998136}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1418998134}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1418998133}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1418998122}
@@ -5570,6 +5577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooting
   particleSparks: {fileID: 698471145442725108, guid: afb575c24d446704c97c739c11bfe1a7, type: 3}
+  animator: {fileID: 0}
 --- !u!114 &1418998131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5619,6 +5627,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f696134aee93f0a48a434b6df4dae9f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChomperGrunt
+--- !u!114 &1418998136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418998117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c7a6c8f747bc95419aa8c2df249d1f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChomperEndAttack
+--- !u!114 &1418998137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418998117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd02d49c313996448b3cc5972f7c6b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChomperStartAttack
 --- !u!1 &1448701944
 GameObject:
   m_ObjectHideFlags: 0
@@ -6322,6 +6354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooting
   particleSparks: {fileID: 698471145442725108, guid: afb575c24d446704c97c739c11bfe1a7, type: 3}
+  animator: {fileID: 0}
 --- !u!114 &1653308273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7589,7 +7622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7602728379097758927, guid: adffb986f9a9ee145925fcb66d2e240e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.78
+      value: -2.82
       objectReference: {fileID: 0}
     - target: {fileID: 7602728379097758927, guid: adffb986f9a9ee145925fcb66d2e240e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7597,7 +7630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7602728379097758927, guid: adffb986f9a9ee145925fcb66d2e240e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.46
+      value: -6.57
       objectReference: {fileID: 0}
     - target: {fileID: 7602728379097758927, guid: adffb986f9a9ee145925fcb66d2e240e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7681,6 +7714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooting
   particleSparks: {fileID: 698471145442725108, guid: afb575c24d446704c97c739c11bfe1a7, type: 3}
+  animator: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
