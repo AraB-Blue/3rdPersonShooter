@@ -4,9 +4,15 @@ using System;
 public class Shooting : MonoBehaviour
 {
    [SerializeField] ParticleSystem particleSparks;
+    private Unit unit;
+   
 
+    private void Awake()
+    {
+        unit = GetComponent<Unit>();
+    }
 
-   public void Shoot (Vector3 enemyPosition, float weaponRange)
+    public void Shoot (Vector3 enemyPosition, float weaponRange)
     {
         if (IsOnLoS(enemyPosition, weaponRange))
         {
@@ -17,6 +23,13 @@ public class Shooting : MonoBehaviour
         {
             Debug.Log("Enemigo no esta en linea de tiro");
         }
+
+       if (unit != null)
+        {
+            unit.FinishAttack();
+ 
+        }
+
     }
     public bool IsOnLoS(Vector3 enemyPosition, float weaponRange)
     {

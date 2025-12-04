@@ -87,7 +87,7 @@ public class Unit : MonoBehaviour
         StartCoroutine (MostrarAccion(endTurn, characterName + " usa la acción de atacar"));
 
         Debug.Log(characterName + " usa la accion atacar");
-        FinishAttack();
+        //FinishAttack();
     }
 
     public void PassTurn()
@@ -119,15 +119,13 @@ public class Unit : MonoBehaviour
     public void FinishAttack ()
     {
         
-        
-        if (!isFriendly)
+        if (isFriendly)
         {
             playerCharacter.targetSelectionPanel.SetActive(false);
         }
         
         hasAttacked = true;
 
-        //playerCharacter.targetSelectionPanel.SetActive(false);
         FinishAction();
 
         /*if (!isFriendly)
