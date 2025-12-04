@@ -34,7 +34,7 @@ public class TurnManager : MonoBehaviour
         UnitSelection.Instance.enabled = true;
         StartCoroutine(MostrarTurno(turnoAliado, "Turno de los aliados"));
 
-        Debug.Log("Turno del jugador");
+        
     }
 
     private void StartEnemyTurn()
@@ -51,7 +51,7 @@ public class TurnManager : MonoBehaviour
         }
 
 
-        Debug.Log("Turno del enemigo");
+        
     }
 
     IEnumerator MostrarTurno (TMP_Text textoUI, string mensaje)
@@ -91,14 +91,29 @@ public class TurnManager : MonoBehaviour
         if (isPlayerTurn)
         {
             if (AllUnitsActed(playerUnits))
-                StartEnemyTurn();
+                //StartEnemyTurn();
+                StartCoroutine(ChangeTurnAfterDelay(false));
         }
 
         else 
         {
             if (AllUnitsActed(enemyUnits))
-                StartPlayerTurn();
+                //StartPlayerTurn();
+                StartCoroutine(ChangeTurnAfterDelay(true));
         }
+    }
+
+    private IEnumerator ChangeTurnAfterDelay (bool toPlayerTurn)
+
+    {
+        yield return new WaitForSeconds (1f);
+
+        if (toPlayerTurn)
+        {
+            StartPlayerTurn();
+        }
+
+        else StartEnemyTurn ();
     }
 
     void Update()

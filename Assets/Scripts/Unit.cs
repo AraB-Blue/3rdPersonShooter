@@ -111,7 +111,9 @@ public class Unit : MonoBehaviour
 
         if (!isFriendly)
         {
-            FinishAction();
+            hasMoved = true;
+            return;
+            //FinishAction();
         }
 
     }

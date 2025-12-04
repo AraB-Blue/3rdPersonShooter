@@ -67,7 +67,7 @@ public class EnemyAI : MonoBehaviour
         if (distanceToTarget <= attackRange && hasLineOfSight(target))
         {
             yield return AttackTarget(target);
-            unit.FinishAction();
+            //unit.FinishAction();
         }
         else
         {
@@ -84,7 +84,7 @@ public class EnemyAI : MonoBehaviour
         }
 
         // terminar el turno
-        unit.FinishAction();
+        //unit.FinishAction();
         isActing = false;
     }
 
