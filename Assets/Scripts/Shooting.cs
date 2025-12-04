@@ -4,22 +4,21 @@ using System;
 public class Shooting : MonoBehaviour
 {
    [SerializeField] ParticleSystem particleSparks;
-    [SerializeField] Animator animator;
+   
    private Unit unit;
    
 
     private void Awake()
     {
         unit = GetComponent<Unit>();
-        animator = GetComponent<Animator>();
+        
     }
 
     public void Shoot (Vector3 enemyPosition, float weaponRange)
     {
         if (IsOnLoS(enemyPosition, weaponRange))
         {
-            if (animator != null)
-                animator.SetTrigger("Attack");
+           
             particleSparks.Play();
             Debug.Log("Enemigo en linea de tiro");
         }

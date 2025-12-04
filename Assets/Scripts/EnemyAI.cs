@@ -129,11 +129,17 @@ public class EnemyAI : MonoBehaviour
     
         shooting.Shoot(target.transform.position, attackRange);
         
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(5f);
+
+        
 
         StartCoroutine (AttackinEvil(EvilAttack, "el enemigo ha atacado"));
 
         unit.FinishAttack();  // se ha pegado a tortas
+                              
+        //animator.ResetTrigger("Attack");
+
+
     }
 
 
@@ -169,7 +175,7 @@ public class EnemyAI : MonoBehaviour
         textoUI.text = mensaje;
         textoUI.gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(4f);
 
         textoUI.gameObject.SetActive(false);
     }
