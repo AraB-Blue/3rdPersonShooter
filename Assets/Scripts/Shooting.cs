@@ -27,7 +27,6 @@ public class Shooting : MonoBehaviour
        if (unit != null)
         {
             unit.FinishAttack();
- 
         }
 
     }

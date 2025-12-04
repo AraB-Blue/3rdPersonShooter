@@ -120,11 +120,18 @@ public class EnemyAI : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(lookDir);
         }
 
-        shooting.Shoot(target.transform.position, attackRange);
+        if (animator !=null)
+        {
+            animator.SetTrigger("Attack");
+        }
+
         yield return new WaitForSeconds(0.2f);
+    
+        shooting.Shoot(target.transform.position, attackRange);
+        
+        yield return new WaitForSeconds(8f);
 
         StartCoroutine (AttackinEvil(EvilAttack, "el enemigo ha atacado"));
-
 
         unit.FinishAttack();  // se ha pegado a tortas
     }
@@ -162,7 +169,7 @@ public class EnemyAI : MonoBehaviour
         textoUI.text = mensaje;
         textoUI.gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(6f);
 
         textoUI.gameObject.SetActive(false);
     }
