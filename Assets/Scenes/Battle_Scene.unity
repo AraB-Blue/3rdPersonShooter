@@ -2326,7 +2326,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooting
   particleSparks: {fileID: 698471145442725108, guid: afb575c24d446704c97c739c11bfe1a7, type: 3}
-  animator: {fileID: 0}
 --- !u!114 &677352690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5399,7 +5398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.99
+      value: -6.21
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5577,7 +5576,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooting
   particleSparks: {fileID: 698471145442725108, guid: afb575c24d446704c97c739c11bfe1a7, type: 3}
-  animator: {fileID: 0}
 --- !u!114 &1418998131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6354,7 +6352,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooting
   particleSparks: {fileID: 698471145442725108, guid: afb575c24d446704c97c739c11bfe1a7, type: 3}
-  animator: {fileID: 0}
 --- !u!114 &1653308273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7714,7 +7711,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooting
   particleSparks: {fileID: 698471145442725108, guid: afb575c24d446704c97c739c11bfe1a7, type: 3}
-  animator: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
