@@ -3,19 +3,22 @@ using System;
 
 public class Shooting : MonoBehaviour
 {
-   [SerializeField] ParticleSystem particleSparks;
-   
+    Animator animator;
+    [SerializeField] ParticleSystem particleSparks; 
    private Unit unit;
+
    
 
     private void Awake()
     {
         unit = GetComponent<Unit>();
-        
+        animator = GetComponent<Animator>();
     }
 
     public void Shoot (Vector3 enemyPosition, float weaponRange)
     {
+        animator.SetTrigger("Attack");
+        
         if (IsOnLoS(enemyPosition, weaponRange))
         {
            
@@ -29,6 +32,8 @@ public class Shooting : MonoBehaviour
 
        if (unit != null)
         {
+
+            animator.SetFloat("forwardMovement", 0f);
             unit.FinishAttack();
         }
 
