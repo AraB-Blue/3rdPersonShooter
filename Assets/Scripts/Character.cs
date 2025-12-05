@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Character : MonoBehaviour
@@ -10,12 +11,14 @@ public class Character : MonoBehaviour
     [SerializeField] protected float maxLife;
     [SerializeField] float baseAttackDamage;
     private bool isDead = false;
+    Animator animator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         name = gameObject.name;
         currentLife = maxLife;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -37,7 +40,7 @@ public class Character : MonoBehaviour
         // Solo morir cuando la vida llega exactamente a 0 o menos
         if (currentLife <= 0)
         {
-            isDead = true;
+            StartCoroutine(Die());
             Debug.Log(name + " ha muerto");
         }
     }
@@ -61,7 +64,9 @@ public class Character : MonoBehaviour
         // Solo morir cuando la vida llega exactamente a 0 o menos
         if (currentLife <= 0)
         {
-            isDead = true;
+
+            StartCoroutine(Die ());
+            
             Debug.Log(name + " ha muerto");
         }
     }
@@ -85,5 +90,16 @@ public class Character : MonoBehaviour
     public float GetMaxLife()
     {
         return maxLife;
+    }
+
+    private IEnumerator Die()
+    {
+        
+        isDead = true;
+        animator.SetTrigger("dead");
+
+        yield return new WaitForSeconds(2f);
+        
+
     }
 }
