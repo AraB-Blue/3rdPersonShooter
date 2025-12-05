@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a44376476e5964398d6e5655d04856, type: 3}
   m_Name: Weapon_HandGun
   m_EditorClassIdentifier: Assembly-CSharp::Weapon
-  weaponName: 
-  weaponDamage: 0
-  armorPenetration: 0
-  magazine: 0
-  magazineSize: 0
+  weaponName: Hand Gun
+  weaponDamage: 15
+  weaponPenetration: 10
+  armorPenetration: 10
+  magazine: 3
+  magazineSize: 3
   weaponRange: 30

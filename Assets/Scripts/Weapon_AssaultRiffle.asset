@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a44376476e5964398d6e5655d04856, type: 3}
   m_Name: Weapon_AssaultRiffle
   m_EditorClassIdentifier: Assembly-CSharp::Weapon
-  weaponName: 
-  weaponDamage: 0
-  armorPenetration: 0
-  magazine: 0
-  magazineSize: 0
+  weaponName: Assault Riffle
+  weaponDamage: 20
+  weaponPenetration: 10
+  armorPenetration: 15
+  magazine: 4
+  magazineSize: 4
   weaponRange: 40

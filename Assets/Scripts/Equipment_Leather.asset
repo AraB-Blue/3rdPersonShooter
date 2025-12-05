@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb138c8fc98c7ff488d35c2625dd6341, type: 3}
   m_Name: Equipment_Leather
   m_EditorClassIdentifier: Assembly-CSharp::Equipment
-  maxDurability: 0
-  currentDurability: 0
-  movementSpeed: 0
-  armor: 0
+  maxDurability: 50
+  currentDurability: 50
+  movementSpeed: 10
+  armor: 10

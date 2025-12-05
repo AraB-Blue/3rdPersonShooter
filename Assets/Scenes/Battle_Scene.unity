@@ -2308,9 +2308,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyCharacter
   name: Grenadier 2
+  currentLife: 0
   maxLife: 200
   baseAttackDamage: 30
-  armorValue: 20
   equippedWeapon: {fileID: 11400000, guid: 5868de5c4eff2e04787074e11a5b0b52, type: 2}
   equippedEquipment: {fileID: 11400000, guid: 70776ed7bc353c24083aa86afe1dfbc4, type: 2}
 --- !u!114 &677352689
@@ -3274,7 +3274,6 @@ MonoBehaviour:
   target_1: {fileID: 1653308259}
   target_2: {fileID: 677352679}
   characterShooting: {fileID: 1332347313391282499}
-  Weapon: {fileID: 11400000, guid: 6601f84d02315fe4cb12446cafed0e66, type: 2}
 --- !u!1 &972826626
 GameObject:
   m_ObjectHideFlags: 0
@@ -4704,7 +4703,6 @@ MonoBehaviour:
   target_1: {fileID: 1653308259}
   target_2: {fileID: 677352679}
   characterShooting: {fileID: 1418998117}
-  Weapon: {fileID: 11400000, guid: 6601f84d02315fe4cb12446cafed0e66, type: 2}
 --- !u!1 &1203577315
 GameObject:
   m_ObjectHideFlags: 0
@@ -5598,11 +5596,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCharacter
   name: Chomper
+  currentLife: 30
   maxLife: 70
   baseAttackDamage: 20
-  armorValue: 20
-  equippedWeapon: {fileID: 11400000, guid: 6601f84d02315fe4cb12446cafed0e66, type: 2}
-  equippedEquipment: {fileID: 11400000, guid: 828123614b29e4e42a0c04f3d9ec99f7, type: 2}
   equipmentList:
   - {fileID: 11400000, guid: 828123614b29e4e42a0c04f3d9ec99f7, type: 2}
   - {fileID: 11400000, guid: 70776ed7bc353c24083aa86afe1dfbc4, type: 2}
@@ -5610,6 +5606,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5868de5c4eff2e04787074e11a5b0b52, type: 2}
   - {fileID: 11400000, guid: 6601f84d02315fe4cb12446cafed0e66, type: 2}
   targetSelectionPanel: {fileID: 1203163903}
+  weaponSelectionPanel: {fileID: 0}
 --- !u!114 &1418998133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6477,9 +6474,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyCharacter
   name: Grenadier 1
+  currentLife: 0
   maxLife: 200
   baseAttackDamage: 30
-  armorValue: 20
   equippedWeapon: {fileID: 11400000, guid: 5868de5c4eff2e04787074e11a5b0b52, type: 2}
   equippedEquipment: {fileID: 11400000, guid: 70776ed7bc353c24083aa86afe1dfbc4, type: 2}
 --- !u!114 &1653308272
@@ -7832,11 +7829,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCharacter
   name: Ellen
+  currentLife: 200
   maxLife: 100
   baseAttackDamage: 10
-  armorValue: 10
-  equippedWeapon: {fileID: 11400000, guid: 6601f84d02315fe4cb12446cafed0e66, type: 2}
-  equippedEquipment: {fileID: 11400000, guid: 828123614b29e4e42a0c04f3d9ec99f7, type: 2}
   equipmentList:
   - {fileID: 11400000, guid: 828123614b29e4e42a0c04f3d9ec99f7, type: 2}
   - {fileID: 11400000, guid: 70776ed7bc353c24083aa86afe1dfbc4, type: 2}
@@ -7844,6 +7839,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6601f84d02315fe4cb12446cafed0e66, type: 2}
   - {fileID: 11400000, guid: 5868de5c4eff2e04787074e11a5b0b52, type: 2}
   targetSelectionPanel: {fileID: 892284809}
+  weaponSelectionPanel: {fileID: 0}
 --- !u!114 &1332347313391282503
 MonoBehaviour:
   m_ObjectHideFlags: 0

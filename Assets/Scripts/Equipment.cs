@@ -9,15 +9,18 @@ public class Equipment : ScriptableObject
     [SerializeField] float movementSpeed;
     [SerializeField] float armor;
 
- 
-    void Start()
+    public float GetArmor()
     {
-        currentDurability = 100f;
+        return armor;
     }
 
-    // Update is called once per frame
-    void Update()
+    public float GetMovementSpeed()
     {
-        
+        return movementSpeed;
+    }
+
+    public float GetDurability()
+    {
+        return currentDurability;
     }
 }
