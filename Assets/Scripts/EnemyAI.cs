@@ -109,7 +109,7 @@ public class EnemyAI : MonoBehaviour
         if (distanceToTarget <= attackRange && hasLineOfSight(target))
         {
             yield return AttackTarget(target);
-            //unit.FinishAction();
+            unit.FinishAction();
         }
         else
         {
